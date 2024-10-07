@@ -1,0 +1,158 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-size: 16px;
+}
+
+h2, h3 {
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+h3 {
+    border-bottom: 3px solid #2980b9;
+    padding-bottom: 5px;
+}
+
+.dashboard-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-container:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+table tbody tr {
+    background-color: #fdfdfd;
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar div {
+    padding: 15px;
+    background-color: #e1e4e8;
+    text-align: center;
+    border-radius: 10px;
+    color: #555;
+}
+
+.calendar .weekend {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.calendar .present {
+    background-color: #27ae60;
+    color: white;
+}
+
+.calendar .absent {
+    background-color: #c0392b;
+    color: white;
+}
+/* Attendance Status */
+#attendanceTable {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin: 60px auto;
+}
+
+#attendanceTable th, #attendanceTable td {
+    padding: 15px;
+    text-align: left;
+}
+
+#attendanceTable tbody tr.present {
+    background-color: #27ae60; /* Green for Present */
+    color: white;
+}
+
+#attendanceTable tbody tr.absent {
+    background-color: #c0392b; /* Red for Absent */
+    color: white;
+}
+
+#attendanceTable tbody tr.on-leave {
+    background-color: #f39c12; /* Yellow for Leave */
+    color: white;
+}
+
+/* Task Graph */
+#taskGraph {
+    margin: 40px auto;
+    height: 300px;
+    background-color: #f7f9fb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+    }
+    table th, table td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 15px;
+    }
+    table th, table td {
+        font-size: 12px;
+    }
+}
